@@ -31,7 +31,6 @@ const processDecelerationRate = require('processDecelerationRate');
 const requireNativeComponent = require('requireNativeComponent');
 const resolveAssetSource = require('resolveAssetSource');
 
-const RCTWebViewManager = require('NativeModules').WebViewManager;
 const RCTWKWebViewManager = require('NativeModules').WKWebViewManager;
 
 const BGWASH = 'rgba(255,255,255,0.8)';
@@ -471,7 +470,7 @@ class WebView extends React.Component {
     if (this.props.useWebKit) {
       viewManager = viewManager || RCTWKWebViewManager;
     } else {
-      viewManager = viewManager || RCTWebViewManager;
+      viewManager = viewManager || RCTWKWebViewManager;
     }
 
     const compiledWhitelist = [
