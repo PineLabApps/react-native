@@ -45,6 +45,8 @@ Pod::Spec.new do |s|
 
   s.subspec "Core" do |ss|
     ss.dependency             "yoga", "#{package["version"]}.React"
+    ss.dependency             "glog", "0.3.5"
+    ss.dependency             "DoubleConversion", "1.1.6"
     ss.source_files         = "React/**/*.{c,h,m,mm,S,cpp}"
     ss.exclude_files        = "**/__tests__/*",
                               "IntegrationTests/*",
